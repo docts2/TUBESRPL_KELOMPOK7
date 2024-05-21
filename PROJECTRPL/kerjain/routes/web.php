@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [BerandaController::class, 'index']);
+Route::get('/detailpekerjaan', [BerandaController::class, 'detail'])->name('detail-pekerjaan');

@@ -41,5 +41,6 @@
             </div>
         </div>
     </div>
+    @yield('content')
     <!-- Header End -->
 </header>

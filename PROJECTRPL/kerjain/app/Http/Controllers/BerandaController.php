@@ -21,6 +21,12 @@ class BerandaController extends Controller
         return view('pages.beranda', $data);
     }
 
+    public function detail()
+    {
+        //
+
+        return view('pages.detailpekerjaan');
+    }
     /**
      * Show the form for creating a new resource.
      */
