@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Portal - Design & Creative Jobs</title>
+    <meta name="description" content="{{ $job->description }}">
+    <title>{{ $job->title }} - Job Portal</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,55 +66,48 @@
     </style>
 </head>
 <body>
-
-
-
-
-<div class="container">
-    <div class="job-image">
-        <img src="{{ asset('assets/img/detail_pekerjaan/graphic.jpg') }}" alt="Job Image">
-    </div>
-    <div class="job-content">
-        <div class="job-header">
-            <div class="job-title">Graphic Designer</div>
-            <div class="company-name">PT Mencari Cinta Sejati</div>
+    <div class="container">
+        <div class="job-image">
+            <img src="{{ asset($job->image_path) }}" alt="Job Image">
         </div>
-        <div class="job-details">
-            <div class="job-detail-item">
-                <strong>Lokasi:</strong> Jakarta, Indonesia
+        <div class="job-content">
+            <div class="job-header">
+                <div class="job-title">{{ $job->title }}</div>
+                <div class="company-name">{{ $job->company_name }}</div>
             </div>
-            <div class="job-detail-item">
-                <strong>Waktu Pekerjaan:</strong> Full-time
+            <div class="job-details">
+                <div class="job-detail-item">
+                    <strong>Lokasi:</strong> {{ $job->location }}
+                </div>
+                <div class="job-detail-item">
+                    <strong>Waktu Pekerjaan:</strong> {{ $job->employment_type }}
+                </div>
+                <div class="job-detail-item">
+                    <strong>Gaji:</strong> {{ $job->salary }}
+                </div>
+                <div class="job-detail-item">
+                    <strong>Deskripsi Pekerjaan:</strong>
+                    <p>{{ $job->description }}</p>
+                </div>
+                <div class="job-detail-item">
+                    <strong>Tanggung Jawab:</strong>
+                    <ul>
+                        @foreach(explode("\n", $job->responsibilities) as $responsibility)
+                            <li>{{ $responsibility }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="job-detail-item">
+                    <strong>Kualifikasi:</strong>
+                    <ul>
+                        @foreach(explode("\n", $job->qualifications) as $qualification)
+                            <li>{{ $qualification }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
-            <div class="job-detail-item">
-                <strong>Gaji:</strong> IDR 10,000,000 - 15,000,000 per bulan
-            </div>
-            <div class="job-detail-item">
-                <strong>Deskripsi Pekerjaan:</strong>
-                <p>Kami mencari Desainer Grafis berbakat untuk menciptakan pengalaman pengguna yang luar biasa. Kandidat yang ideal harus memiliki minat terhadap desain yang bersih dan berseni, memiliki keterampilan UI yang unggul, dan mampu menerjemahkan persyaratan tingkat tinggi ke dalam alur interaksi dan artefak, serta mengubahnya menjadi antarmuka pengguna yang indah, intuitif, dan fungsional.</p>
-            </div>
-            <div class="job-detail-item">
-                <strong>Tanggung Jawab:</strong>
-                <ul>
-                    <li>Berkolaborasi dengan manajemen dan teknik produk untuk menentukan dan menerapkan solusi inovatif untuk arah produk, visual, dan pengalaman</li>
-                    <li>Jalankan semua tahapan desain visual mulai dari konsep, penyerahan akhir, hingga rekayasa</li>
-                    <li>Konseptualisasikan ide orisinal yang menghadirkan kesederhanaan dan kemudahan penggunaan pada hambatan desain yang kompleks</li>
-                </ul>
-            </div>
-            <div class="job-detail-item">
-                <strong>Kualifikasi:</strong>
-                <ul>
-                    <li>Pengalaman desain grafis yang terbukti</li>
-                    <li>Keterampilan desain grafis yang dapat dibuktikan dengan portofolio yang kuat</li>
-                    <li>Kemahiran dalam Photoshop, Illustrator, atau desain visual dan alat pembingkaian kawat lainnya</li>
-                    <li>Keterampilan desain visual yang sangat baik dengan kepekaan terhadap interaksi sistem pengguna</li>
-                    <li>Kemampuan untuk mempresentasikan desain Anda dan menjual solusi Anda ke berbagai pemangku kepentingan</li>
-                </ul>
-            </div>
+            <a href="/" class="apply-btn">Apply Sekarang</a>
         </div>
-        <a href="#" class="apply-btn">Apply Sekarang</a>
     </div>
-</div>
-
 </body>
 </html>

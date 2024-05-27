@@ -22,6 +22,7 @@
                                         <li><a href="#blogsaran">Blog</a></li>
                                         <li><a href="#blogsaran">FAQ</a></li>
                                         <li><a href="about.html">Review</a></li>
+                                        <li><a href="/">Profile</a></li>
 
                                     </ul>
                                 </nav>

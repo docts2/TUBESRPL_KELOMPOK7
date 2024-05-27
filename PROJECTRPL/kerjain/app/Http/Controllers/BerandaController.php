@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\JobCategories;
+Use App\Models\Job;
 use Illuminate\Http\Request;
 
 class BerandaController extends Controller
@@ -16,16 +17,17 @@ class BerandaController extends Controller
 
         $data = [
             'job_categories' => JobCategories::all(),
+            'jobs' => Job::all(),
         ];
 
         return view('pages.beranda', $data);
     }
 
-    public function detail()
+   public function detail()
     {
         //
-
-        return view('pages.detailpekerjaan');
+        $jobs = Job::all();
+        return view('detailpekerjaan', compact('jobs'));
     }
     /**
      * Show the form for creating a new resource.
@@ -48,7 +50,8 @@ class BerandaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $job = Job::findOrFail($id); // Mengambil pekerjaan berdasarkan ID
+        return view('pages.detailpekerjaan', compact('job')); // Mengirimkan data pekerjaan ke view
     }
 
     /**

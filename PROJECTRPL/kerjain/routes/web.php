@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [BerandaController::class, 'index']);
-Route::get('/detailpekerjaan', [BerandaController::class, 'detail'])->name('detail-pekerjaan');
+#Route::get('/detailpekerjaan', [BerandaController::class, 'detail'])->name('detail-pekerjaan');
+Route::get('/job/{id}', [JobController::class, 'show'])->name('job.show');
