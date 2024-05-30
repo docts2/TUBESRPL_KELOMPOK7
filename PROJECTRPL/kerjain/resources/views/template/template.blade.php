@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="{{ asset('/') }}assets/css/slick.css">
     <link rel="stylesheet" href="{{ asset('/') }}assets/css/nice-select.css">
     <link rel="stylesheet" href="{{ asset('/') }}assets/css/style.css">
+ 
+
 </head>
 
 <body>
@@ -37,17 +39,17 @@
             </div>
         </div>
     </div>
-    <!-- Preloader Start -->
+    <!-- Preloader End -->
+
     @include('template.navbar')
 
     @yield('content')
-
 
     @include('template.footer')
 
     <!-- JS here -->
 
-    <!-- All JS Custom Plugins Link Here here -->
+    <!-- All JS Custom Plugins Link Here -->
     <script src="{{ asset('/') }}assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="{{ asset('/') }}assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -56,29 +58,29 @@
     <!-- Jquery Mobile Menu -->
     <script src="{{ asset('/') }}assets/js/jquery.slicknav.min.js"></script>
 
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <!-- Jquery Slick, Owl-Carousel Plugins -->
     <script src="{{ asset('/') }}assets/js/owl.carousel.min.js"></script>
     <script src="{{ asset('/') }}assets/js/slick.min.js"></script>
     <script src="{{ asset('/') }}assets/js/price_rangs.js"></script>
 
-    <!-- One Page, Animated-HeadLin -->
+    <!-- One Page, Animated-Headline -->
     <script src="{{ asset('/') }}assets/js/wow.min.js"></script>
     <script src="{{ asset('/') }}assets/js/animated.headline.js"></script>
     <script src="{{ asset('/') }}assets/js/jquery.magnific-popup.js"></script>
 
-    <!-- Scrollup, nice-select, sticky -->
+    <!-- Scrollup, Nice-Select, Sticky -->
     <script src="{{ asset('/') }}assets/js/jquery.scrollUp.min.js"></script>
     <script src="{{ asset('/') }}assets/js/jquery.nice-select.min.js"></script>
     <script src="{{ asset('/') }}assets/js/jquery.sticky.js"></script>
 
-    <!-- contact js -->
+    <!-- Contact js -->
     <script src="{{ asset('/') }}assets/js/contact.js"></script>
     <script src="{{ asset('/') }}assets/js/jquery.form.js"></script>
     <script src="{{ asset('/') }}assets/js/jquery.validate.min.js"></script>
     <script src="{{ asset('/') }}assets/js/mail-script.js"></script>
     <script src="{{ asset('/') }}assets/js/jquery.ajaxchimp.min.js"></script>
 
-    <!-- Jquery Plugins, main Jquery -->
+    <!-- Jquery Plugins, Main Jquery -->
     <script src="{{ asset('/') }}assets/js/plugins.js"></script>
     <script src="{{ asset('/') }}assets/js/main.js"></script>
 

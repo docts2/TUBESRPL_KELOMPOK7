@@ -10,7 +10,7 @@
                                 {{-- <h4>About Us</h4> --}}
                                 <div class="footer-pera">
                                     <div class="logo">
-                                        <a href="index.html"><img
+                                        <a href="/"><img
                                                 src="{{ asset('/') }}assets/img/logo/logo-kerjain-white.png" alt=""
                                                 width="250"></a>
                                     </div>
@@ -26,7 +26,7 @@
                             <h4>For Jobseekers</h4>
                             <ul>
                                 <li>
-                                    <a href="#">Profile</a>
+                                    <a href="/profiles">Profile</a>
                                 </li>
                                 <li><a href="#">Search Jobs</a></li>
                                 <li><a href="#">Register</a></li>
@@ -40,9 +40,9 @@
                         <div class="footer-tittle">
                             <h4>About Kerja.in</h4>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">FAQ</a></li>
+                                <li><a href="/">About Us</a></li>
+                                <li><a href="#blogsaran">Blog</a></li>
+                                <li><a href="#blogsaran">FAQ</a></li>
                                 <li><a href="#">Review</a></li>
                             </ul>
                         </div>
@@ -53,7 +53,7 @@
                         <div class="footer-tittle">
                             <h4>Contact Us</h4>
                             <ul>
-                                <li><a href="#">+62 823-8955-5850</a></li>
+                                <li><a href="https://wa.link/bdz8gm">+62 823-8955-5850</a></li>
                                 <li><a href="#">+62 819-1755-3725</a></li>
                                 <li><a href="#">+62 822-1008-7570</a></li>
                             </ul>

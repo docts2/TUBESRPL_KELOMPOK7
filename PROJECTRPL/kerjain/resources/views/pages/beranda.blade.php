@@ -60,7 +60,7 @@
                 <div class="col-lg-12">
                     <div class="section-tittle text-center">
                         <span>Kategori Pekerjaan</span>
-                        <h2>Daftar Pekerjaan</h2>
+                        <h2>Pekerjaan Yang Tersedia</h2>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,6 @@
                         </div>
                         <div class="services-cap">
                             <h5><a href="{{ route('job.show', ['id' => $item->id]) }}">{{ $item->category_name }}</a></h5>
-                            <span>(658)</span>
                         </div>
                     </div>
                 </div>
