@@ -21,10 +21,10 @@ class ProfileController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'full_name' => 'required',
-            'email' => 'required|email|unique:profiles,email',
-            'phone_number' => 'required',
-            'address' => 'required',
+            'full_name' => 'required|regex:/^[a-zA-Z\s]+$/|max:100',
+            'email' => 'required|email|unique:profiles,email,|max:255',
+            'phone_number' => 'required|regex:/^[0-9]+$/|max:20',
+            'address' => 'required|regex:/^[a-zA-Z0-9\s,.-]+$/|max:255',
             'resume' => 'required|file|mimes:pdf,doc,docx|max:2048',
         ]);
 
@@ -54,10 +54,10 @@ class ProfileController extends Controller
     public function update(Request $request, Profile $profile)
     {
         $request->validate([
-            'full_name' => 'required',
-            'email' => 'required|email|unique:profiles,email,' . $profile->id,
-            'phone_number' => 'required',
-            'address' => 'required',
+            'full_name' => 'required|regex:/^[a-zA-Z\s]+$/|max:100',
+            'email' => 'required|email|unique:profiles,email,|max:255' . $profile->id,
+            'phone_number' => 'required|regex:/^[0-9]+$/|max:20',
+            'address' => 'required|regex:/^[a-zA-Z0-9\s,.-]+$/|max:255',
             'resume' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
         ]);
 
@@ -78,7 +78,7 @@ class ProfileController extends Controller
         $profile->delete();
         return redirect()->route('profiles.index')->with('success', 'Profile deleted successfully.');
     }
-    
+
     public function resume(Profile $profile)
     {
         $path = storage_path('app/' . $profile->resume);
