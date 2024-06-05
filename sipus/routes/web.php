@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
@@ -51,6 +52,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/saved-jobs', [SavedJobController::class, 'index'])->name('saved-jobs.index');
     Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
     Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+    Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
+    Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
+    Route::get('/faq/{id}/answer', [FaqController::class, 'getAnswer'])->name('faq.answer');
 });
 
 
