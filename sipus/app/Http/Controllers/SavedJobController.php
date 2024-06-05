@@ -12,7 +12,7 @@ class SavedJobController extends Controller
     {
         $job = Job::findOrFail($id);
         $user = Auth::user();
-        
+
         if (!$user->savedJobs->contains($job)) {
             $user->savedJobs()->attach($job);
         }
@@ -28,5 +28,6 @@ class SavedJobController extends Controller
         return view('saved_jobs.index', compact('savedJobs'));
     }
 }
+
 
 
