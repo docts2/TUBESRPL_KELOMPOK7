@@ -5,6 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\SavedJobController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +44,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cek_login:user']], function () {
         Route::resource('user', UserController::class);
     });
+
+    Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
+    Route::post('/jobs/{id}/save', [SavedJobController::class, 'store'])->name('jobs.save');
+    Route::get('/saved-jobs', [SavedJobController::class, 'index'])->name('saved-jobs.index');
+
 });
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+
+
