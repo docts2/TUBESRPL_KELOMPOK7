@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AdminController;
@@ -25,6 +26,11 @@ use App\Http\Controllers\SavedJobController;
 //     return view('welcome');
 // });
 
+
+Route::get('/', function () {
+    return view('landing');
+})->name('landing');
+
 // metode nya get lalu masukkan namespace AuthController 
 // attribute name merupakan penamaan dari route yang kita buat
 // kita tinggal panggil fungsi route(name) pada layout atau controller
@@ -48,6 +54,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
+    Route::get('/jobs/search', [JobController::class, 'search'])->name('jobs.search');
     Route::post('/jobs/{id}/save', [SavedJobController::class, 'store'])->name('jobs.save');
     Route::get('/saved-jobs', [SavedJobController::class, 'index'])->name('saved-jobs.index');
     Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
@@ -55,6 +62,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
     Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
     Route::get('/faq/{id}/answer', [FaqController::class, 'getAnswer'])->name('faq.answer');
+    Route::get('/jobs/{id}', [JobController::class, 'show'])->name('jobs.show');
+    Route::post('/jobs/{id}/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 });
 
 
