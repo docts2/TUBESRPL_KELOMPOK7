@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
-    public function show($id)
+    public function index()
     {
-        $job = Job::findOrFail($id);
-        return view('pages.detailpekerjaan', compact('job'));
+        $jobs = Job::all();
+        return view('jobs.index', compact('jobs'));
     }
 }
+
+

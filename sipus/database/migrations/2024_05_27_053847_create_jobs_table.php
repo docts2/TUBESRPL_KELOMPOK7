@@ -16,14 +16,14 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('company_name');
-            $table->string('location');
-            $table->string('employment_type');
-            $table->string('salary');
+            $table->string('company')->nullable();
+            $table->string('location')->nullable();
+            $table->string('employment_type')->nullable();
+            $table->string('salary')->nullable();
             $table->text('description');
-            $table->text('responsibilities');
-            $table->text('qualifications');
-            $table->string('image_path');
+            $table->text('responsibilities')->nullable();
+            $table->text('qualifications')->nullable();
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }

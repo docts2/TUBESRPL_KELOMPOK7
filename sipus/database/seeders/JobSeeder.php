@@ -25,5 +25,14 @@ class JobSeeder extends Seeder
             'qualifications' => 'Pengalaman desain grafis yang terbukti Keterampilan desain grafis yang dapat dibuktikan dengan portofolio yang kuat Kemahiran dalam Photoshop, Illustrator, atau desain visual dan alat pembingkaian kawat lainnya Keterampilan desain visual yang sangat baik dengan kepekaan terhadap interaksi sistem pengguna Kemampuan untuk mempresentasikan desain Anda dan menjual solusi Anda ke berbagai pemangku kepentingan',
             'image_path' => 'assets/img/detail_pekerjaan/graphic.jpg'
         ]);
+        Job::create([
+            'title' => 'Software Engineer',
+            'description' => 'Develop and maintain software applications.',
+        ]);
+
+        Job::create([
+            'title' => 'Data Analyst',
+            'description' => 'Analyze data to help companies make informed decisions.',
+        ]);
     }
 }

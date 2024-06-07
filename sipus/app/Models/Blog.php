@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Job extends Model
+class Blog extends Model
 {
     use HasFactory;
-    public function savedByUsers()
+
+    protected $fillable = ['title', 'content', 'user_id'];
+
+    public function user()
     {
-        return $this->belongsToMany(User::class, 'saved_jobs')->withTimestamps();
+        return $this->belongsTo(User::class);
     }
 }

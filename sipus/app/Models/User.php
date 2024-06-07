@@ -20,6 +20,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'username', // field baru
+        'level', // field baru
         'password',
     ];
 
@@ -42,4 +44,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function savedJobs()
+    {
+        return $this->belongsToMany(Job::class, 'saved_jobs')->withTimestamps();
+    }
 }
