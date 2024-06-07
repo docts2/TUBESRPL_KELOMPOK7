@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container text-center" style="margin-top: 100px;">
-        <h1>Welcome to Sipus</h1>
+        <h1>Welcome to Kerja.in</h1>
         <p>Your one-stop solution for job searching and reviews.</p>
         <div class="mt-4">
             <a href="{{ route('login') }}" class="btn btn-primary btn-lg mx-2">Login</a>
