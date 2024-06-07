@@ -16,7 +16,7 @@ class JobSeeder extends Seeder
     {
         Job::create([
             'title' => 'Graphic Designer',
-            'company_name' => 'PT Mencari Cinta Sejati',
+            'company' => 'PT Mencari Cinta Sejati',
             'location' => 'Batam, Indonesia',
             'employment_type' => 'Full-time',
             'salary' => 'IDR 10,000,000 - 15,000,000 per bulan',
