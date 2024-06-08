@@ -1,14 +1,16 @@
 <?php
 
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\JobController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\JobController;
 use App\Http\Controllers\SavedJobController;
 
 /*
@@ -30,6 +32,12 @@ use App\Http\Controllers\SavedJobController;
 Route::get('/', function () {
     return view('landing');
 })->name('landing');
+
+
+
+
+Route::get('/', [BerandaController::class, 'index']);
+
 
 // metode nya get lalu masukkan namespace AuthController 
 // attribute name merupakan penamaan dari route yang kita buat
@@ -66,6 +74,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/jobs/{id}/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 });
 
-
-
+    Route::get('/job/{id}', [JobController::class, 'show'])->name('job.show');
+    Route::resource('/profiles', ProfileController::class);
+    Route::get('/profiles/{profile}/resume', [ProfileController::class, 'resume'])->name('profiles.resume');
 

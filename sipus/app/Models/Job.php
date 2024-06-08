@@ -17,4 +17,5 @@ class Job extends Model
     {
         return $this->hasMany(Review::class);
     }
+
 }
