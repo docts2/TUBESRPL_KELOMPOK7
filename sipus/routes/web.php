@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\JobController;
@@ -10,6 +11,28 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
+use App\Http\Controllers\SavedJobController;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/', function () {
+    return view('landing');
+})->name('landing');
+
 
 
 
@@ -39,6 +62,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
+    Route::get('/jobs/search', [JobController::class, 'search'])->name('jobs.search');
     Route::post('/jobs/{id}/save', [SavedJobController::class, 'store'])->name('jobs.save');
     Route::get('/saved-jobs', [SavedJobController::class, 'index'])->name('saved-jobs.index');
     Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
@@ -46,7 +70,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
     Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
     Route::get('/faq/{id}/answer', [FaqController::class, 'getAnswer'])->name('faq.answer');
+    Route::get('/jobs/{id}', [JobController::class, 'show'])->name('jobs.show');
+    Route::post('/jobs/{id}/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+});
+
     Route::get('/job/{id}', [JobController::class, 'show'])->name('job.show');
     Route::resource('/profiles', ProfileController::class);
     Route::get('/profiles/{profile}/resume', [ProfileController::class, 'resume'])->name('profiles.resume');
-});
+

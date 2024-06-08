@@ -7,6 +7,7 @@ use App\Models\Job;
 
 class JobSeeder extends Seeder
 {
+
     /**
      * Run the database seeds.
      *
@@ -26,6 +27,7 @@ class JobSeeder extends Seeder
             'image_path' => 'assets/img/detail_pekerjaan/graphic.jpg'
         ]);
         Job::create([
+
             'title' => 'Software Engineer',
             'description' => 'Develop and maintain software applications.',
         ]);
@@ -34,5 +36,8 @@ class JobSeeder extends Seeder
             'title' => 'Data Analyst',
             'description' => 'Analyze data to help companies make informed decisions.',
         ]);
+
+        // Tambahkan lebih banyak lowongan pekerjaan jika diperlukan
     }
 }
+
