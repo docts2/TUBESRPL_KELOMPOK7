@@ -26,4 +26,6 @@ class JobSeeder extends Seeder
             'image_path' => 'assets/img/detail_pekerjaan/graphic.jpg'
         ]);
     }
+
+    
 }

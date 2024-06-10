@@ -111,8 +111,9 @@
                             <img src="{{ asset('/') }}assets/img/blog/home-blog1.jpg" alt="" width="100%" height="350">
                         </div>
                         <div class="process-cap mt-4">
-                            <h5>Blog</h5>
-                            <button class="btn btn-primary">Dapatkan Tips</button>
+                        <h5>Blog</h5>
+                            <a href="{{ route('blogs.index') }}" class="btn btn-primary">Dapatkan Tips</a>
+
                         </div>
                     </div>
                 </div>
@@ -123,7 +124,7 @@
                         </div>
                         <div class="process-cap mt-4">
                             <h5>FAQ</h5>
-                            <button class="btn btn-primary">Dapatkan Tips</button>
+                            <a href="{{ route('faq.index') }}" class="btn btn-primary">Dapatkan Tips</a>
                         </div>
                     </div>
                 </div>
