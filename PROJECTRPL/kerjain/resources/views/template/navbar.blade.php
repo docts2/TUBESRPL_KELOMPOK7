@@ -18,10 +18,10 @@
                                 <nav class="d-none d-lg-block">
                                     <ul id="navigation">
                                         <li><a href="/">Home</a></li>
-                                        <li><a href="/">Search Jobs </a></li>
+                                        <li><a href="/jobs">Search Jobs </a></li>
                                         <li><a href="#blogsaran">Blog</a></li>
                                         <li><a href="#blogsaran">FAQ</a></li>
-                                        <li><a href="/jobs/1">Review</a></li>
+                                        <li><a href="/jobs">Review</a></li>
                                         <li><a href="/profiles">Profile</a></li>
 
                                     </ul>

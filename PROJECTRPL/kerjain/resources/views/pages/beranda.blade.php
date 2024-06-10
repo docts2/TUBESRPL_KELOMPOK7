@@ -41,7 +41,7 @@
                                     </div>
                                 </div>
                                 <div class="search-form">
-                                    <a href="#">Find job</a>
+                                    <a href="/jobs">Find job</a>
                                 </div>
                             </form>
                         </div>
@@ -82,7 +82,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="browse-btn2 text-center mt-50">
-                        <a href="/" class="border-btn2">Lihat Semua</a>
+                        <a href="/jobs" class="border-btn2">Lihat Semua</a>
                     </div>
                 </div>
             </div>

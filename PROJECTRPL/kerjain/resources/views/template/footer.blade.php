@@ -28,8 +28,8 @@
                                 <li>
                                     <a href="/profiles">Profile</a>
                                 </li>
-                                <li><a href="#">Search Jobs</a></li>
-                                <li><a href="#">Register</a></li>
+                                <li><a href="/jobs">Search Jobs</a></li>
+                                <li><a href="/register">Register</a></li>
                             </ul>
                         </div>
 
@@ -43,7 +43,7 @@
                                 <li><a href="/">About Us</a></li>
                                 <li><a href="#blogsaran">Blog</a></li>
                                 <li><a href="#blogsaran">FAQ</a></li>
-                                <li><a href="#">Review</a></li>
+                                <li><a href="/jobs">Review</a></li>
                             </ul>
                         </div>
                     </div>
