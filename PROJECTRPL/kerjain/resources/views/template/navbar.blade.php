@@ -21,7 +21,7 @@
                                         <li><a href="/">Search Jobs </a></li>
                                         <li><a href="#blogsaran">Blog</a></li>
                                         <li><a href="#blogsaran">FAQ</a></li>
-                                        <li><a href="about.html">Review</a></li>
+                                        <li><a href="/jobs/1">Review</a></li>
                                         <li><a href="/profiles">Profile</a></li>
 
                                     </ul>
@@ -29,8 +29,8 @@
                             </div>
                             <!-- Header-btn -->
                             <div class="header-btn d-none f-right d-lg-block">
-                                <a href="#" class="btn head-btn1">Register</a>
-                                <a href="#" class="btn head-btn2">Login</a>
+                                <a href="/register" class="btn head-btn1">Register</a>
+                                <a href="/login" class="btn head-btn2">Login</a>
                             </div>
                         </div>
                     </div>
