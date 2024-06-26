@@ -16,7 +16,7 @@
 
             <div id="collapse{{ $faq->id }}" class="collapse" aria-labelledby="heading{{ $faq->id }}" data-parent="#accordionExample">
                 <div class="card-body">
-                    {{ $faq->answer }}
+                    {{ $faq->answer }} 
                 </div>
             </div>
         </div>
@@ -24,11 +24,11 @@
     </div>
 
     <div class="card mt-3">
-        <div class="card-body">
-            <h5 class="card-title">Ask a Question</h5>
+        <div class="card-body"> 
+            <h5 class="card-title">Ask a Question</h5> 
             <form action="{{ route('faq.store') }}" method="POST">
                 @csrf
-                <div class="form-group">
+                <div class="form-group"> 
                     <label for="question">Question</label>
                     <input type="text" class="form-control" id="question" name="question" required>
                 </div>
@@ -40,19 +40,4 @@
             </form>
         </div>
     </div>
-</div>
-@endsection
-
-@section('scripts')
-    <script>
-        $(document).ready(function() {
-            $('.collapse').on('show.bs.collapse', function () {
-                $(this).prev('.card-header').addClass('active');
-            });
-
-            $('.collapse').on('hide.bs.collapse', function () {
-                $(this).prev('.card-header').removeClass('active');
-            });
-        });
-    </script>
-@endsection
+</div>@endsection
